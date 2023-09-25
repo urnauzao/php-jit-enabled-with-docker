@@ -1,0 +1,1 @@
+docker exec php php -i | grep 'jit'

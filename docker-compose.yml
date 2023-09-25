@@ -1,0 +1,20 @@
+version: '3'
+services:
+  php:
+    container_name: php
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: '8.2.10-zts-bullseye'
+    image: ml-prod
+    ports:
+      - '8000:8000'
+    environment:
+      APP_ENV: 'production'
+      PHP_VERSION: '8.2.10-zts-bullseye'
+    volumes:
+      - ./public:/var/www/app/public
+      - ./docker/supervisord:/etc/supervisor/conf.d/
+      - ./docker/php/extra-php.ini:/usr/local/etc/php/conf.d/99_extra.ini
+      # - ./docker/php/extra-php.ini.semjit:/usr/local/etc/php/conf.d/99_extra.ini
