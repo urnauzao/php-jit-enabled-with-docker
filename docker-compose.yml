@@ -7,12 +7,20 @@ services:
       dockerfile: Dockerfile
       args:
         PHP_VERSION: '8.2.10-zts-bullseye'
-    image: ml-prod
+    image: php-devs
     ports:
       - '8000:8000'
     environment:
       APP_ENV: 'production'
       PHP_VERSION: '8.2.10-zts-bullseye'
+    deploy:
+      resources:
+        limits:
+          cpus: '1' # Limite de CPU para 0,5 núcleos (50%)
+          memory: 512M # Limite de memória para 512 megabytes
+        reservations:
+          cpus: '0.5' # Reserva de CPU para 0,2 núcleos (20%)
+          memory: 256M # Reserva de memória para 256 megabytes
     volumes:
       - ./public:/var/www/app/public
       - ./docker/supervisord:/etc/supervisor/conf.d/

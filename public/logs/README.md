@@ -1,0 +1,1 @@
+Aqui ficarão todos os arquivos de log da aplicação.

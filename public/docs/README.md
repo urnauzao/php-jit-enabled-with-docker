@@ -1,0 +1,1 @@
+Aqui ficarão todos os arquivos JSON gerados pela consulta do script teste0.php

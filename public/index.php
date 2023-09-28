@@ -1,17 +1,15 @@
 <?php
-echo "<h1>Testes Disponíveis</h1>" . PHP_EOL . PHP_EOL;
+echo "<h1>Testes Disponíveis</h1>";
 echo "<p>";
-echo "<a href='/teste1.php' target='_blank'>Teste 1</a><br>";
-echo "<a href='/teste2.php' target='_blank'>Teste 2</a><br>";
-echo "<a href='/teste3.php' target='_blank'>Teste 3</a><br>";
-echo "<hr><a href='/script.php' target='_blank'>Popular Json</a><br>";
+echo "<a href='/info.php' target='_blank'>Informações do PHP</a><br>";
+echo "<hr>";
+foreach (range(0, 5) as $id) {
+    echo "<a href='/teste{$id}.php' target='_blank'>Teste {$id}</a><br>";
+}
 echo "<hr><h2>Resultados</h2>";
-echo "<a href='/jit_ativo_teste1.html' target='_blank'>Teste 1 | JIT Ativo</a><br>";
-echo "<a href='/jit_inativo_teste1.html' target='_blank'>Teste 1 | JIT Inativo</a><br>";
-echo "<hr>";
-echo "<a href='/jit_ativo_teste2.html' target='_blank'>Teste 2 | JIT Ativo</a><br>";
-echo "<a href='/jit_inativo_teste2.html' target='_blank'>Teste 2 | JIT Inativo</a><br>";
-echo "<hr>";
-echo "<a href='/jit_ativo_teste3.html' target='_blank'>Teste 3 | JIT Ativo</a><br>";
-echo "<a href='/jit_inativo_teste3.html' target='_blank'>Teste 3 | JIT Inativo</a><br>";
+foreach (range(0, 5) as $id) {
+    echo "<a href='/results/jit_ativo_teste{$id}.html' target='_blank'>Teste {$id} | JIT Ativo</a><br>";
+    echo "<a href='/results/jit_inativo_teste{$id}.html' target='_blank'>Teste {$id} | JIT Inativo</a><br>";
+    echo "<hr>";
+}
 echo "</p>";
