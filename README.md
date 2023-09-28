@@ -3,7 +3,7 @@
 - O projeto será executado por padrão na porta 8000. Você pode acessar clicando aqui [localhost:8000](localhost:8000)
 - Vídeos com todo o tutorial de utilização do JIT + Benchmarking
   - Como usar o Jit: [https://youtu.be/2KC-m0ChSU4?si=4aHx9LMmCe8M8MY8](https://youtu.be/2KC-m0ChSU4?si=4aHx9LMmCe8M8MY8)
-  - Benchmarking com JIT: [#](#)
+  - Benchmarking JIT: [https://youtu.be/ZJ1U3aOXd_g](https://youtu.be/ZJ1U3aOXd_g)
 
 ## Scripts 
 
